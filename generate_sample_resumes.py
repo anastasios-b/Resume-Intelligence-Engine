@@ -1,8 +1,13 @@
-"""Generate sample software engineer resume PDFs into the `resumes/` folder.
+"""Generate sample software engineer resume PDFs into the ``resumes/`` folder.
 
-These PDFs are minimal but valid for this project: they start with a %PDF-
-header so `load_pdf_binary` accepts them, and they embed realistic resume-like
-text content that the LLM can inspect.
+This is a convenience script for local testing and demos. Running it will
+create several realistic-but-synthetic resumes (junior, mid, senior, ML,
+graduate) so you can immediately see how the ranking behaves without having
+to collect your own PDFs first.
+
+The generated files are minimal but valid for this project: they start with a
+``%PDF-`` header so :func:`pdf_parser.load_pdf_binary` accepts them, and they
+embed resume-like text content that the LLM can inspect.
 """
 
 import os

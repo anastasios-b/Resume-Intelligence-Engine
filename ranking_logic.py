@@ -1,26 +1,16 @@
-"""LLM-first ranking logic skeleton.
+"""LLM-driven ranking logic.
 
-This module provides a lightweight orchestration layer for ranking candidates
-by delegating scoring and breakdown computation to an LLM. It intentionally
-avoids implementing numeric scoring logic locally; instead it builds prompts,
-calls an LLM (via a provided client or the `llm_backend` module), parses the
-LLM's structured JSON response, and returns a canonical result shape.
+This module is the glue between the core app and the language model.
 
-Why this file?
-- Centralizes prompt construction, response parsing, and validation.
-- Provides a single interface for the rest of the app to call (evaluate_candidates_with_llm).
-- Makes it easy to stub the LLM during tests and to swap LLM providers later.
+Responsibilities:
 
-Planned responsibilities:
-- normalize and validate candidate/config shapes
-- build a repeatable prompt template
-- call the LLM through a pluggable client
-- parse and validate JSON responses into a canonical result
-- provide audit-friendly output (raw prompt/response)
+* Build a detailed prompt for each candidate based on the ranking config.
+* Call an LLM (via :mod:`llm_backend` or a custom client) with that prompt.
+* Parse the model's JSON response into a canonical Python dict.
+* Aggregate the per-candidate results into a ranked list.
 
-This file contains a minimal, ready-to-use skeleton and a simple orchestration
-function you can call in your pipeline. The actual LLM call is delegated to
-`call_llm()` which is easy to stub in tests.
+The intent is to keep all LLM-specific behavior (prompting, parsing, basic
+validation) in one place so it is easy to test and to swap out the backend.
 """
 
 from typing import Any, Dict, List, Optional
@@ -29,11 +19,11 @@ import time
 
 
 def normalize_candidate(raw: Dict[str, Any]) -> Dict[str, Any]:
-	"""Return a normalized candidate dict (lightweight).
+	"""Return a lightly-normalized candidate dictionary.
 
-	This function can be extended to canonicalize field names, lower-case
-	strings, and ensure required subkeys exist. Keep it minimal so the LLM
-	receives a predictable shape.
+	We only ensure a few keys are always present so the prompt template stays
+	stable. Deeper normalization or feature engineering can be added here later
+	if needed.
 	"""
 	c = dict(raw)
 	# Ensure some keys exist to avoid KeyError in prompts
@@ -46,10 +36,11 @@ def normalize_candidate(raw: Dict[str, Any]) -> Dict[str, Any]:
 
 
 def build_prompt_for_candidate(candidate: Dict[str, Any], config: Dict[str, Any]) -> str:
-	"""Construct a plain-text prompt for the LLM.
+	"""Construct the full text prompt for the LLM.
 
-	Keep prompts small and include an explicit JSON output schema example so
-	the LLM returns easy-to-parse JSON.
+	The prompt describes the candidate and ranking rules and shows the model an
+	exact JSON schema and example. The model is then asked to respond with only
+	a single JSON object following that schema.
 	"""
 	cand = normalize_candidate(candidate)
 	prompt = (
@@ -103,9 +94,10 @@ def call_llm(prompt: str, llm_client: Optional[Any] = None, **opts) -> str:
 
 
 def parse_llm_json_response(raw: str) -> Dict[str, Any]:
-	"""Extract and parse the first JSON object found in the LLM response string.
+	"""Extract and parse the first JSON object found in the model's response.
 
-	Returns a dict on success or raises ValueError on parse errors.
+	This is intentionally a bit defensive: it tries to ignore markdown fences
+	or small formatting glitches while still failing loudly on malformed JSON.
 	"""
 	# Strip common markdown code fences and whitespace
 	text = raw.strip()
@@ -136,10 +128,10 @@ def parse_llm_json_response(raw: str) -> Dict[str, Any]:
 
 def evaluate_candidates_with_llm(candidates: List[Dict[str, Any]], config: Dict[str, Any],
 								 llm_client: Optional[Any] = None, concurrency: int = 1) -> List[Dict[str, Any]]:
-	"""Evaluate each candidate by calling the LLM and returning canonical results.
+	"""Score all candidates using the LLM and return normalized results.
 
-	This function is intentionally sequential and simple; you can add
-	concurrency later if needed.
+	The current implementation processes candidates one-by-one for simplicity.
+	A ``llm_client`` can be injected in tests or when swapping backends.
 	"""
 	results: List[Dict[str, Any]] = []
 	overall_start = time.time()

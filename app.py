@@ -4,16 +4,16 @@ from pdf_parser import load_pdf_binary
 from llm_backend import is_ollama_installed
 from ranking_logic import evaluate_candidates_with_llm
 
-# Fields used to evaluate the candidates
+# High-level configuration for how we evaluate and rank candidates
 TARGET_FIELD = "software engineering"
 
-# IMPORTANT: The total sum of these indices must be 1
+# IMPORTANT: The total sum of these weights must be 1
 WEIGHT_EXPERIENCE = 0.5
 WEIGHT_EDUCATION = 0.2
 WEIGHT_GENERAL_SKILLS = 0.3
 
 REQUIRED_QUALITIES = {
-    # Required education
+    # Required education (minimal acceptable baseline)
     "education": {
         "school": "high school diploma",
         "computer science": "bachelor degree",
@@ -72,7 +72,7 @@ REQUIRED_QUALITIES = {
         "hybrid"
     ],
 
-    # Required personal information (place of residence etc.)
+    # Required personal information (e.g. country and city)
     "personal_information": {
         "country": "Greece", # Candidate must live in this country
         "location": "Thessaloniki", # Candidate must live in this country
@@ -80,11 +80,8 @@ REQUIRED_QUALITIES = {
 }
 
 # Good-to-have (optional) qualities — not required but increase ranking.
-# Implementation notes:
-#   - Treat these fields as optional bonuses. If a candidate meets required qualities
-#     and also matches optional ones, add extra points to their final score (do not
-#     reject them for missing optional qualities).
-#   - Scoring for optional items can mirror required fields but with lower weight.
+# If a candidate meets all required qualities and also matches optional ones,
+# they should be ranked higher than others with the same base score.
 OPTIONAL_QUALITIES = {
     "education": {        
         "languages": {
