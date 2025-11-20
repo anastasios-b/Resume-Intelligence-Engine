@@ -1,0 +1,34 @@
+%PDF-1.4
+Elena Karra
+Graduate Software Engineer / Trainee
+Thessaloniki, Greece
+Email: elena.karra@example.com
+GitHub: github.com/elenakarra
+LinkedIn: linkedin.com/in/elenakarra
+
+SUMMARY
+Recent computer science graduate seeking a junior/trainee software engineering role. Strong foundation in Python and web development, with several academic and personal projects.
+
+EDUCATION
+BSc Computer Science, Aristotle University of Thessaloniki  (2021–2025)
+- Thesis: "Building a job-matching platform using Python and React"
+- Coursework: algorithms, databases, distributed systems, machine learning
+
+PROJECTS
+Job Matcher (Python, Django, React)
+- Built a job-search web application as part of thesis project.
+- Implemented REST APIs in Django and a React front-end.
+
+Personal Portfolio Site (Next.js)
+- Created a personal portfolio site with blog and project showcases.
+
+SKILLS
+- Languages: Python, JavaScript/TypeScript, SQL
+- Frameworks: Django, React, Next.js
+- Tools: Git, Docker basics
+
+LANGUAGES
+- Greek: native
+- English: advanced (C1)
+
+%%EOF

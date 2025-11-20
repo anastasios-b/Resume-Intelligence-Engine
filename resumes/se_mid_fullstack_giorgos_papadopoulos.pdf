@@ -1,0 +1,48 @@
+%PDF-1.4
+Giorgos Papadopoulos
+Full-Stack Software Engineer
+Thessaloniki, Greece
+Email: giorgos.p@example.com
+GitHub: github.com/gpapadopoulos
+LinkedIn: linkedin.com/in/gpapadopoulos
+
+PERSONAL INFORMATION
+Country: Greece
+Location: Thessaloniki
+Available types of work: remote, hybrid
+
+SUMMARY
+Full-stack engineer with 5+ years of experience building web applications end-to-end, from React frontends to Python/Node.js backends on AWS. Strong focus on clean code, testing, and mentoring junior developers.
+
+EXPERIENCE
+Senior Full-Stack Engineer, FinPay Solutions, Thessaloniki  (2022–present)
+- Designed and implemented microservices in Python (4 years) using FastAPI and Node.js.
+- Worked extensively with AWS (3+ years) including ECS, RDS, S3, and API Gateway.
+- Collaborated closely with clients, contacting clients directly to gather requirements.
+- Promoted team work and coached junior engineers, showing adaptability to new technologies.
+
+Software Engineer, WebCraft Labs, Athens  (2019–2022)
+- Built internal tools in Django and React to support operations team.
+- Improved SQL queries and indexing, reducing page load times by 40%.
+- Contributed to internal machine learning experiments (2+ years exposure to machine learning workflows).
+
+EDUCATION
+MSc Software Engineering, University of Patras  (2020–2022)
+BSc Computer Science, University of Patras  (2016–2020)
+
+SKILLS
+- Specific skills and experience in years:
+  - python: 4 years (backend development)
+  - aws: 3 years (deploying and operating services)
+  - machine learning: 2 years (building and integrating ML-powered features)
+- General skills: contacting clients, team work, adaptability to new technologies
+- Frontend: React, TypeScript, Redux
+- DevOps: AWS, Docker, CI/CD (GitHub Actions)
+- Databases: PostgreSQL, MySQL, Redis
+
+LANGUAGES
+- Greek: conversational
+- English: conversational
+- German: intermediate
+
+%%EOF

@@ -1,0 +1,36 @@
+%PDF-1.4
+Anna Kotsou
+Software Engineer (Junior Backend)
+Athens, Greece
+Email: anna.kotsou@example.com
+GitHub: github.com/annakotsou
+LinkedIn: linkedin.com/in/annakotsou
+
+SUMMARY
+Junior backend engineer with 2 years of professional Python experience, building APIs and ETL pipelines. Comfortable with AWS and Docker, and eager to grow in machine learning and MLOps.
+
+EXPERIENCE
+Python Backend Engineer, Acme Analytics, Athens  (2023–present)
+- Developed and maintained REST APIs in Python (FastAPI, Flask).
+- Built ETL jobs that processed millions of rows daily on AWS (Lambda, S3, RDS).
+- Wrote unit and integration tests, improving coverage from 55% to 80%.
+- Collaborated with data science team to productionize ML models.
+
+Intern Software Engineer, DataSoft, Thessaloniki  (2022–2023)
+- Assisted in migrating a monolithic PHP application to a Python microservice.
+- Implemented small features and bug fixes under senior supervision.
+
+EDUCATION
+BSc Computer Science, Aristotle University of Thessaloniki  (2019–2023)
+
+SKILLS
+- Languages: Python (2+ years), SQL, Bash
+- Cloud: AWS (Lambda, S3, RDS, CloudWatch)
+- Tools: Docker, Git, Linux
+- Soft skills: teamwork, communication with non-technical stakeholders
+
+LANGUAGES
+- Greek: native
+- English: fluent (C1)
+
+%%EOF

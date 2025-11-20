@@ -1,0 +1,39 @@
+RESUME RANKING RESULTS
+======================================================================
+
+1. software_engineer_demo_3.pdf
+   Score: 8.2/10
+   Passed Required: Yes
+   Candidate lacks relevant experience and education in software engineering, but shows some optional skills and a suitable location.
+
+2. se_ml_engineer_nikos_petrou.pdf
+   Score: 7.2/10
+   Passed Required: Yes
+   The candidate lacks experience in software engineering, but has a decent education and general skills.
+
+3. software_engineer_demo_1.pdf
+   Score: 6.5/10
+   Passed Required: No
+
+4. software_engineer_demo_2.pdf
+   Score: 6.5/10
+   Passed Required: No
+
+5. se_graduate_trainee_elena_karra.pdf
+   Score: 6.5/10
+   Passed Required: No
+
+6. se_senior_backend_maria_iliadi.pdf
+   Score: 6.2/10
+   Passed Required: No
+   The candidate lacks experience and relevant education in the software engineering field.
+
+7. se_junior_backend_anna_kotsou.pdf
+   Score: 5.1/10
+   Passed Required: No
+
+8. se_mid_fullstack_giorgos_papadopoulos.pdf
+   Score: 5.1/10
+   Passed Required: No
+   The candidate has no experience in software engineering, no relevant education, and no mention of specific skills such as Python, AWS, or machine learning.
+

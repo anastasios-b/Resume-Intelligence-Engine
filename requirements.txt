@@ -1,0 +1,20 @@
+# Resume Intelligence Engine - minimal dependencies
+# Core dependencies used by the scripts described in README.md
+python-dotenv>=1.0.0
+openai>=0.27.0
+pdfplumber>=0.7.6
+PyPDF2>=3.0.0
+requests>=2.28.0
+pandas>=1.5.0
+
+# Optional / extras (uncomment to enable additional functionality)
+# tiktoken>=0.4.0          # OpenAI tokenization utilities (if using token-based ops)
+# sentence-transformers>=2.2.2  # Semantic similarity / embeddings (if used)
+# anthropic>=0.1.0         # Anthropic official client (if using Anthropic API)
+# pdfminer.six>=20221105   # Alternative PDF parser (heavy but powerful)
+# pillow>=9.0.0            # Image handling inside PDFs (if needed)
+
+# Notes:
+# - Ollama (local LLM) is run outside Python and doesn't require a pip package.
+# - Pin versions as appropriate for your environment; these are reasonably recent
+#   stable releases that work on Python 3.10+.

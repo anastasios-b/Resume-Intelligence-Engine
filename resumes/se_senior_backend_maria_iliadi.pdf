@@ -1,0 +1,36 @@
+%PDF-1.4
+Maria Iliadi
+Senior Backend Engineer / Tech Lead
+Remote (based in Thessaloniki, Greece)
+Email: maria.iliadi@example.com
+GitHub: github.com/miliadi
+LinkedIn: linkedin.com/in/mariailiadi
+
+SUMMARY
+Senior backend engineer with 8+ years of experience designing and scaling distributed systems in Python and Go. Led teams of 4–6 engineers and collaborated with product and data teams to deliver features in high-traffic environments.
+
+EXPERIENCE
+Tech Lead & Senior Backend Engineer, CloudShip, Remote  (2021–present)
+- Designed event-driven architecture using AWS SNS/SQS and Lambda.
+- Owned critical microservices written in Python (FastAPI) and Go.
+- Introduced observability stack (Prometheus, Grafana, structured logging).
+- Mentored 5 engineers and ran regular code reviews and architecture sessions.
+
+Senior Software Engineer, DataWave, Athens  (2018–2021)
+- Implemented large-scale data processing pipelines (Spark, Airflow).
+- Optimized PostgreSQL schemas and queries for analytics workloads.
+
+EDUCATION
+MSc Computer Science, ETH Zurich  (2016–2018)
+BSc Informatics, Athens University of Economics and Business  (2012–2016)
+
+SKILLS
+- Languages: Python, Go, SQL
+- Cloud: AWS (ECS, Lambda, RDS, DynamoDB, S3), Terraform
+- Practices: TDD, code reviews, system design
+
+LANGUAGES
+- Greek: native
+- English: fluent (C2)
+
+%%EOF

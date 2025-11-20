@@ -1,0 +1,44 @@
+%PDF-1.4
+Nikos Petrou
+Machine Learning Engineer
+Thessaloniki, Greece
+Email: nikos.petrou@example.com
+GitHub: github.com/npetrou
+LinkedIn: linkedin.com/in/nikospetrou
+
+PERSONAL INFORMATION
+Country: Greece
+Location: Thessaloniki
+Available types of work: remote, hybrid
+
+SUMMARY
+Machine learning engineer with 3+ years of experience building and deploying ML models, focusing on NLP and recommendation systems, primarily in Python. Comfortable working across experimentation and productionization.
+
+EXPERIENCE
+ML Engineer, RecoTech, Thessaloniki  (2023–present)
+- Built recommendation models in Python (3+ years of python experience) using PyTorch and scikit-learn.
+- Deployed models as REST services using FastAPI and Docker on AWS (2+ years of aws experience).
+- Worked with product and sales teams, contacting clients to understand requirements, and demonstrating team work and adaptability to new technologies.
+
+Data Scientist, Insight Analytics, Athens  (2021–2023)
+- Developed NLP models for customer feedback classification (2+ years of machine learning experience).
+- Presented results to stakeholders and helped prioritize product changes.
+
+EDUCATION
+BSc Computer Science, University of Ioannina  (2018–2022)
+
+SKILLS
+- Specific skills and experience in years:
+  - python: 3 years (production machine learning systems)
+  - aws: 2 years (deploying ML services)
+  - machine learning: 3 years (NLP and recommendation systems)
+- General skills: contacting clients, team work, adaptability to new technologies
+- ML stack: PyTorch, scikit-learn, pandas, NumPy
+- MLOps: Docker, MLflow, AWS S3, Lambda
+- General: Git, Linux, Jupyter
+
+LANGUAGES
+- Greek: conversational
+- English: conversational
+
+%%EOF
